@@ -1,0 +1,15 @@
+<div class="container d-flex flex-column vh-100">
+  <!-- Chat Messages Section -->
+  <div class="flex-grow-1 overflow-auto p-3" style="max-height: 80vh;">
+    <ul class="list-unstyled">
+      <li *ngFor="let message of messages">{{message.sender}}:   {{message.content}}</li>
+    </ul>
+  </div>
+
+  <!-- Chat Input Section -->
+  <div class="input-group fixed-bottom p-3">
+    <textarea placeholder="Type your message here" class="form-control" [(ngModel)]="newMessage" aria-label="With textarea"></textarea>
+    <button class="btn btn-dark" (click)="sendMessage()">Send</button>
+  </div>
+</div>
+<router-outlet/>

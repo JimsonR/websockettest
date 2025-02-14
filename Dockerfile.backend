@@ -1,0 +1,21 @@
+FROM maven:3.9.8-eclipse-temurin-21 AS backend-builder
+WORKDIR /backend
+
+ARG APP_SOURCE=WebSocketSpring_
+
+# COPY ./pom.xml ./
+# COPY ./src ./src
+COPY WebSocketSpring_/pom.xml ./
+COPY WebSocketSpring_/src ./src
+
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:21
+WORKDIR /WebSocketSpring_
+
+COPY --from=backend-builder /backend/target/WebSocketSpring-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "/WebSocketSpring_/app.jar"]
+
