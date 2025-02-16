@@ -14,7 +14,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.
                 addEndpoint("/ws").
-        setAllowedOrigins("http://ec2-15-207-114-112.ap-south-1.compute.amazonaws.com")
+        // setAllowedOrigins("http://ec2-15-207-114-112.ap-south-1.compute.amazonaws.com")
+        setAllowedOriginPatterns("http://*.compute.amazonaws.com")
         .addInterceptors(new HttpSessionHandshakeInterceptor())
 //                .withSockJS()
         ;// Enables fallback options for browsers that doesn't websockets
