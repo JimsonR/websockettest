@@ -12,11 +12,12 @@ export class WebsocketService {
   public messages$ = this.messageSubject.asObservable(); // Expose as Observable
   backendUrl=''
   API_URL = environment.apiUrl
+  WS_URL = environment.wsUrl
   constructor(private ngZone: NgZone) {
     if(typeof window !== 'undefined'){
       this.backendUrl = window.location.origin.includes('localhost')
       ? 'ws://localhost:8080/ws'
-      : 'ws://backend:8080/ws';
+      : this.WS_URL;
     }else{
       this.backendUrl = 'ws://backend:8080/ws';
     }
