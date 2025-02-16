@@ -42,7 +42,7 @@ jobs:
             
             - name: Build Frontend Docker Image
               run: |
-                docker build -t jimsonrats/websocketapp-backend:latest -f Dockerfile.frontend .
+                docker build -t jimsonrats/websocketapp-frontend:latest -f Dockerfile.frontend .
             
             - name: Login to Dockerhub
               run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
