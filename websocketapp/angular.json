@@ -26,13 +26,16 @@
           "options": {
             "outputPath": "dist/your-app-name-server",
             "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "allowedCommonJsDependencies": ["ws"]
+            "tsConfig": "tsconfig.server.json"
+        
           }
         },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ws"
+            ],
             "outputPath": "dist/websocketapp",
             "index": "src/index.html",
             "browser": "src/main.ts",
