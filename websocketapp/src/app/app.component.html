@@ -1,15 +1,19 @@
 <div class="container d-flex flex-column vh-100">
   <!-- Chat Messages Section -->
-  <div class="flex-grow-1 overflow-auto p-3" style="max-height: 80vh;">
-    <ul class="list-unstyled">
-      <li *ngFor="let message of messages">{{message.sender}}:   {{message.content}}</li>
+  <div class="flex-grow-1 p-3 d-flex flex-column-reverse custom-scroll" style="max-height: 80vh;">
+    <ul class="list-unstyled d-flex flex-column gap-2">
+      <!-- <li class="text-bg-light p-2 bg-opacity-1 rounded-start d-flex align-self-end">asdasasdasddasdasdasd</li> -->
+      <li class="text-bg-light p-2  shadow p-3 mb-5 bg-body-tertiary rounded bg-opacity-1 float-start rounded-start  d-inline-flex align-self-end" *ngFor="let message of messages">
+        {{message.sender}}: {{message.content}}
+      </li>
     </ul>
   </div>
 
   <!-- Chat Input Section -->
-  <div class="input-group fixed-bottom p-3">
+  <div class="input-group p-3 bg-white border-top">
     <textarea placeholder="Type your message here" class="form-control" [(ngModel)]="newMessage" aria-label="With textarea"></textarea>
     <button class="btn btn-dark" (click)="sendMessage()">Send</button>
   </div>
 </div>
+
 <router-outlet/>

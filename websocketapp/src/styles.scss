@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+
+    /* CSS HEX */
+ 
+// --citrine: #E2DB1Fff;
+// --old-gold: #D9B943ff;
+// --buff: #D19768ff;
+// --puce: #C8768Cff;
+// --steel-pink: #BF54B0ff;
+// --steel-pink-2: #B732D5ff;
+// --veronica: #AE10F9ff;
+ 
+
+// /* CSS HSL */
+// --citrine: hsla(58, 77%, 50%, 1);
+// --old-gold: hsla(47, 66%, 56%, 1);
+// --buff: hsla(27, 53%, 61%, 1);
+// --puce: hsla(344, 43%, 62%, 1);
+// --steel-pink: hsla(308, 46%, 54%, 1);
+// --steel-pink-2: hsla(289, 66%, 52%, 1);
+// --veronica: hsla(281, 95%, 52%, 1);
+
+/* SCSS HEX */
+
+$falu-red: #76030Fff;
+$chocolate-cosmos: #65071Eff;
+$tyrian-purple: #550B2Cff;
+$dark-purple: #440F3Bff;
+$russian-violet: #33134Aff;
+$federal-blue: #231758ff;
+$federal-blue-2: #121B67ff;
+
+/* SCSS HSL */
+$falu-red: hsla(354, 95%, 24%, 1);
+$chocolate-cosmos: hsla(345, 87%, 21%, 1);
+$tyrian-purple: hsla(333, 77%, 19%, 1);
+$dark-purple: hsla(310, 64%, 16%, 1);
+$russian-violet: hsla(275, 59%, 18%, 1);
+$federal-blue: hsla(251, 59%, 22%, 1);
+$federal-blue-2: hsla(234, 70%, 24%, 1);
+
+/* SCSS RGB */
+$falu-red: rgba(118, 3, 15, 1);
+$chocolate-cosmos: rgba(101, 7, 30, 1);
+$tyrian-purple: rgba(85, 11, 44, 1);
+$dark-purple: rgba(68, 15, 59, 1);
+$russian-violet: rgba(51, 19, 74, 1);
+$federal-blue: rgba(35, 23, 88, 1);
+$federal-blue-2: rgba(18, 27, 103, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-right: linear-gradient(90deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-bottom: linear-gradient(180deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-left: linear-gradient(270deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-top-right: linear-gradient(45deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-bottom-right: linear-gradient(135deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-top-left: linear-gradient(225deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-bottom-left: linear-gradient(315deg, #76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+$gradient-radial: radial-gradient(#76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff);
+
+
+
+body{
+background: $gradient-top;
+}

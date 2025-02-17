@@ -1,0 +1,11 @@
+// ::ng-deep body {
+//     background:radial-gradient(#76030Fff, #65071Eff, #550B2Cff, #440F3Bff, #33134Aff, #231758ff, #121B67ff)
+//     ;
+// }
+.custom-scroll{
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.custom-scroll::-webkit-scrollbar{
+display: none;
+}
