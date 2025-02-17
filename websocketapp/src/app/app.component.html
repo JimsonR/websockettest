@@ -11,7 +11,7 @@
 
   <!-- Chat Input Section -->
   <div class="input-group p-3 bg-white border-top">
-    <textarea placeholder="Type your message here" class="form-control" [(ngModel)]="newMessage" aria-label="With textarea"></textarea>
+    <textarea #messageInput placeholder="Type your message here" class="form-control" (keydown)="handleKeyDown($event)" [(ngModel)]="newMessage" aria-label="With textarea"></textarea>
     <button class="btn btn-dark" (click)="sendMessage()">Send</button>
   </div>
 </div>

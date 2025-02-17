@@ -12,10 +12,7 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21
 WORKDIR /WebSocketSpring_
-
 COPY --from=backend-builder /backend/target/WebSocketSpring-0.0.1-SNAPSHOT.jar app.jar
-
 EXPOSE 8080
-
 CMD ["java", "-jar", "/WebSocketSpring_/app.jar"]
 
